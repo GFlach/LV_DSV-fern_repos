@@ -1,4 +1,8 @@
 /aktuell/.ipynb_checkpoints
 *.db
 *.pyc
+<<<<<<< HEAD
 /Notebook-Start
+=======
+/Notebook-Start.lnk
+>>>>>>> 9497d35775228e1cf418e13636a9664cbcf5c905

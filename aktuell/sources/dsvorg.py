@@ -255,10 +255,13 @@ def demo_samp1(fS, lage):
     ax1.set_xlabel('Zeit')
     ax1.set_ylabel('Amplitude')
     ax1.set_title('Fehler bei linearer Interpolation')
+    ax1.set_ylim([-1, 1])
+    ax1.grid(True)
     ax2 = ax1.twinx()  # create clone of ax1
     sqe = (x_hat-np.sin(2*np.pi*f*tp))**2  # quadratischer Fehler
     ax2.plot(tp, sqe, 'b')
-    ax2.axis(xmin=-1, ymax=sqe.max())
+    ax2.set_ylim([-1, 1])
+    #ax2.axis(xmin=-1, ymax=sqe.max())
     ax2.set_ylabel('Quadratischer Fehler', color='b')
 
 def demo_samp2():
