@@ -101,6 +101,7 @@ class Sweep:
         plt.grid(True)
         plt.xlabel('f in Hz', x=1)
         
+        
 class Rechteck:
     def __init__(self, ampl=1, tv=0.5, vs=0, offs=0, per=1):
         self.Ampl = ampl
@@ -167,6 +168,7 @@ class Rechteck:
         ax3.set_xlim([-fmax, fmax])
         ax3.set_xlabel('f in Hz', x=1)
         ax3.grid(True)
+        plt.tight_layout()
         
     def reko_rechteck(self, anzh=10):
         if (anzh > 50):
