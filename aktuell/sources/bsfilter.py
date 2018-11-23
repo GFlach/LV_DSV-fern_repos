@@ -11,9 +11,6 @@ from scipy.signal import butter, lfilter
 from scipy.signal import freqz
 import matplotlib.pyplot as plt
 import numpy as np
-#from scipy.io import wavfile
-from dsv import dsvorg
-
 
 def butter_hp_filter(data, fgu=1000, fs=44100, order=5):
     b, a = butter_hp(fgu, fs, order=order)
@@ -96,35 +93,3 @@ def bandfilter(fgu=1000, fgo=1000, order=5):
     plt.title('Bandfilter Ordnung %s' %order)    
 
 
-##filter_design(44100, 500, 2000)
-#filter_applic(500,2000)
-#bandfilter(fgu=1500, fgo=2000,order=10)
-
-#data_in = dsvorg.load_data('dsv1_rauschen')
-#plt.plot(np.abs(fft(data_in))[0:25000])
-#data_out_lp = filter_applic_lp(data_in, fgo=1000, order=5)
-#plt.plot(np.abs(fft(data_out_lp))[0:25000])
-
-#data_in_hp = data_out_lp
-#data_out_hp = filter_applic_hp(data_in_hp, fgu=1000, order=5)
-#dsvorg.write_data('dsv1_kind_bp', data_out_hp)
-#plt.plot(np.abs(fft(data_out_hp))[0:25000])
-#data_out = data_out_lp * data_out_hp
-#plt.plot(np.abs(fft(data_out_hp))[0:25000] * np.abs(fft(data_out_lp))[0:25000])
-#plt.plot(np.abs(fft(data_out))[0:25000])
-
-
-#data_in = dsvorg.load_data('dsv1_rauschen')
-#plt.plot(np.abs(fft(data_in))[0:25000])
-#data_out_lp = filter_applic_lp(data_in, fgo=500, order=5)
-#plt.plot(np.abs(fft(data_out_lp))[0:25000])
-#data_out_hp = filter_applic_hp(data_in, fgu=2000, order=5)
-#plt.plot(np.abs(fft(data_out_hp))[0:25000])
-
-#data_out = data_in_hp - data_out_lp
-#plt.plot(np.abs(fft(data_out))[0:25000])
-
-#dsvorg.write_data('dsv1_kind_bp', data_out_hp)
-#data_out = data_out_lp * data_out_hp
-#plt.plot(np.abs(fft(data_out_hp))[0:25000] * np.abs(fft(data_out_lp))[0:25000])
-#plt.plot(np.abs(fft(data_out))[0:25000])

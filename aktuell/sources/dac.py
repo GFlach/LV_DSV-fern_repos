@@ -181,6 +181,7 @@ def sample_hold(data, fS=1024):
         plt.grid(True)
         plt.legend(loc=4)
         plt.axis([-511, 512, min(data)-0.1, max(data)+0.1])
+        plt.show()
         return y_sh
     else:
         print('fS muss Zweierpotenz sein')
