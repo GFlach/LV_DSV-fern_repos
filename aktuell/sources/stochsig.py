@@ -72,14 +72,14 @@ def show_histograms(x,y,z):
 
 def mean_var(x,y,z):
     mw = mean(x)
-    var = statistics.pvariance(x) 
-    print('Datenreihe 1:\nMittelwert: ' + str(round(mw,2)) +' Varianz: ' + str(round(var,2)) + '\n')
+    var_x = var(x) 
+    print('Datenreihe 1:\nMittelwert: ' + str(round(mw,2)) +' Varianz: ' + str(round(var_x,2)) + '\n')
     mw = mean(y)
-    var = statistics.pvariance(y) 
-    print('Datenreihe 2:\nMittelwert: ' + str(round(mw,2)) +' Varianz: ' + str(round(var,2)) + '\n')
+    var_y = var(y) 
+    print('Datenreihe 2:\nMittelwert: ' + str(round(mw,2)) +' Varianz: ' + str(round(var_y,2)) + '\n')
     mw = mean(z)
-    var = statistics.pvariance(z) 
-    print('Datenreihe 3:\nMittelwert: ' + str(round(mw,2)) +' Varianz: ' + str(round(var,2)) + '\n')
+    var_z = var(z) 
+    print('Datenreihe 3:\nMittelwert: ' + str(round(mw,2)) +' Varianz: ' + str(round(var_z,2)) + '\n')
 
 def show_dependency(x,y,z):
     if len(x) != len(y) != len(z):
